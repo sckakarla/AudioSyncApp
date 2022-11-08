@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SyncView: View {
+    let rooms: [Room];
+    
     var body: some View {
         VStack {
             Text("Audio Sync Logo")
@@ -18,6 +20,12 @@ struct SyncView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)
                 .padding()
+            List {
+                ForEach(rooms) { room in
+                    RoomInfoView(room: room)
+                        .listRowBackground(Color.gray.opacity(0.1))
+                }
+            }
             Button(action: {}) {
                 ZStack(alignment: .center) {
                     Circle()
@@ -36,6 +44,6 @@ struct SyncView: View {
 
 struct SyncView_Previews: PreviewProvider {
     static var previews: some View {
-        SyncView()
+        SyncView(rooms: Room.sampleRooms);
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct AudioSyncApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SyncView(rooms: Room.sampleRooms)
         }
     }
 }

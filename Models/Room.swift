@@ -23,7 +23,7 @@ struct Room: Identifiable {
 }
 
 extension Room {
-    let sampleMembers: [Member] = [
+    static let sampleMembers: [Member] = [
         Member(memberName: "Pete"),
         Member(memberName: "Stanley"),
         Member(memberName: "Kevin"),
