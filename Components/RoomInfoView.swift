@@ -18,23 +18,17 @@ struct RoomInfoView: View {
                     .accessibilityAddTraits(.isHeader)
                     .foregroundColor(Color.black)
                 Spacer();
-                Label("\(room.numMembers)", systemImage: "person")
-                    .accessibilityLabel("\(room.numMembers) members")
-                    .foregroundColor(Color.black);
                 Button(action: {}) {
                     ZStack(alignment: .center) {
-                        Rectangle()
+                        Circle()
                             .fill(Color.red)
-                        Label("Sync!", systemImage: "mic.fill")
-                            .accessibilityLabel("Sync!")
+                        Image(systemName: "mic.fill")
                             .foregroundColor(Color.white)
-                            .font(.caption)
                     }
                     .frame(width: 70, height: 30)
                 };
             }.font(.caption)
         }
-        .foregroundColor(Color.gray.opacity(0.6))
     }
 }
 

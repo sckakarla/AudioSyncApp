@@ -10,10 +10,23 @@ import SwiftUI
 struct AudioView: View {
     var body: some View {
         VStack {
-            Text("Audio Sync Logo")
-            Text("Sync your audio with people near you...")
-                .padding(50)
+            Text("(Current person)'s audio:")
+                .font(.headline);
+            AudioContainerView()
+                .padding();
+            Button(action: {}) {
+                ZStack(alignment: .center) {
+                    Circle()
+                        .fill(Color.red)
+                    Text("UnSync")
+                        .foregroundColor(Color.white)
+                        .fontWeight(.bold)
+                }
+                .frame(width: 80, height: 80)
+                .padding()
+            }
         }
+        .padding()
     }
 }
 
