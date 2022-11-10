@@ -32,6 +32,8 @@ struct AudioView: View {
 
 struct AudioView_Previews: PreviewProvider {
     static var previews: some View {
-        AudioView()
+        NavigationView {
+            AudioView()
+        }
     }
 }

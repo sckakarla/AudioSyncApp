@@ -11,7 +11,10 @@ import SwiftUI
 struct AudioSyncApp: App {
     var body: some Scene {
         WindowGroup {
-            SyncView(rooms: Room.sampleRooms)
+            NavigationView {
+                // Starting Screen
+                SyncView(rooms: Room.sampleRooms)
+            }
         }
     }
 }
